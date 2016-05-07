@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include "player/player.h"
+#include "animal/animal.h"
 
 int main(int argc, char *argv[]) {
   
   char id[12] = "iriya";
   char name[12] = "イリヤ";
   Player* test_player;
+  Animal* goo;
+
+  goo = Animal_new(id, name);
+  printf("animal: %s\n", goo->name);
 
   test_player = Player_new(id, name);
   printf("プレイヤーの名前: %s\n", Player_get_name(test_player));
